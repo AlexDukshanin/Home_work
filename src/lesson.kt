@@ -5,12 +5,14 @@ fun main() {
     println("2 - Проверка палиндрома (строковый способ)")
     println("3 - Проверка на простое число")
     println("4 - Сумма чисел до единичного разряда")
+    println("5 - Лесенка")
 
     when (readLine()?.toIntOrNull()) {
         1 -> Lesson3_1()
         2 -> Lesson3_1_1()
         3 -> Lesson3_2()
         4 -> Lesson3_3()
+        5 -> Lesson3_4()
         else -> println("Неверный выбор")
     }
 }
@@ -84,6 +86,7 @@ fun isPrime(n: Int): Boolean {
     }
     return true // Делителей нет -> простое
 }
+
 fun Lesson3_3() {
     println("Введите положительное число:")
     val number = readLine()!!.toInt()
@@ -109,4 +112,19 @@ fun Lesson3_3() {
     }
 
     println("Окончательный результат: $result")
+}
+
+fun Lesson3_4() {
+        println("Введите высоту лесенки:")
+        val height = readLine()!!.toInt()
+
+        for (i in height downTo 1) {
+            // Печатаем i символов '#' в каждой строке
+            for (j in 1..i) {
+                print("#")
+            }
+            // Переходим на новую строку после каждой строки с решетками
+            println()
+        }
+    }
 }
