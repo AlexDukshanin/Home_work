@@ -1,3 +1,7 @@
+package lesson3
+
+import kotlin.text.iterator
+
 fun main() {
 
     println("Выбор задачи")
@@ -115,15 +119,14 @@ fun Lesson3_3() {
 }
 
 fun Lesson3_4() {
-        println("Введите высоту лесенки:")
-        val height = readLine()!!.toInt()
+    println("Введите высоту лесенки:")
+    val height = readLine()!!.toInt()
 
-        for (i in height downTo 1) {
-            // Печатаем i символов '#' в каждой строке
-            for (j in 1..i) {
-                print("#")
-            }
-            // Переходим на новую строку после каждой строки с решетками
-            println()
+    for (i in height downTo 1) {
+        // Печатаем i символов '#' в каждой строке
+        for (j in 1..i) {
+            print("#")
         }
+        println()
     }
+}
