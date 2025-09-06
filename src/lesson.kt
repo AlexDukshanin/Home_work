@@ -4,11 +4,13 @@ fun main() {
     println("1 - Проверка палиндрома (математический способ)")
     println("2 - Проверка палиндрома (строковый способ)")
     println("3 - Проверка на простое число")
+    println("4 - Сумма чисел до единичного разряда")
 
     when (readLine()?.toIntOrNull()) {
         1 -> Lesson3_1()
         2 -> Lesson3_1_1()
         3 -> Lesson3_2()
+        4 -> Lesson3_3()
         else -> println("Неверный выбор")
     }
 }
@@ -81,4 +83,30 @@ fun isPrime(n: Int): Boolean {
         }
     }
     return true // Делителей нет -> простое
+}
+fun Lesson3_3() {
+    println("Введите положительное число:")
+    val number = readLine()!!.toInt()
+
+    var result = number
+
+    // Продолжаем суммировать цифры, пока результат не станет однозначным числом
+    while (result >= 10) {
+        println("Текущее число: $result")
+
+        // Преобразуем число в строку, чтобы получить отдельные цифры
+        val digits = result.toString()
+        var sum = 0
+
+        // Суммируем все цифры
+        for (digitChar in digits) {
+            val digit = digitChar.toString().toInt()
+            sum += digit
+        }
+
+        result = sum
+        println("Сумма цифр: $sum")
+    }
+
+    println("Окончательный результат: $result")
 }
