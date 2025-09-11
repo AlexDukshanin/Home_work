@@ -4,8 +4,8 @@ fun main() {
     val name = "Hello World, I am teach Kotlin"
 
     val words = name.split(" ")
-    val reversedSentence = words.reversed().joinToString(" ")
+    val reversedname = words.reversed().joinToString(" ")
 
     println("Исходная строка: $name")
-    println("Перевернутые слова: $reversedSentence")
+    println("Перевернутые слова: $reversedname")
 }
