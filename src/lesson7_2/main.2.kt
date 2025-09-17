@@ -8,7 +8,7 @@ fun main() {
     println()
 
     println("bookData1 == bookData2: ${bookData1 == bookData2}")   // False
-    println("bookData1 == bookData1: ${bookData1 == bookData1}")
+    println("bookData1 == bookData1: ${bookData1 == bookData1}")   //True
 
     println()
 
@@ -25,4 +25,11 @@ fun main() {
     println(bookData1)
     println(bookData2)
     println(bookData3)
+
+    println()
+
+    val BD1 = bookData1.toString()
+    val BD2 = bookData2.toString()
+
+    println("${BD1 == BD2}")  //Сравнение через стринг
 }
