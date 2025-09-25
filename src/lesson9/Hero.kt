@@ -29,9 +29,11 @@ class Hero(
 
     fun useCriticalAttack(): Boolean {
         if (criticalAttacks > 0) {
-            criticalAttacks--
+            criticalAttacks --
+            println("Критическая атака использована. Осталось: $criticalAttacks")
             return true
         }
+        println("Критические атаки закончились!")
         return false
     }
 

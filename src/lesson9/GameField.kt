@@ -89,8 +89,11 @@ class GameField(
                     damageType = "КРИТИЧЕСКАЯ"
                     println("🔥 АКТИВИРОВАНА КРИТИЧЕСКАЯ АТАКА!")
                 }
+            } else {
+                println("Нет критических атак")
             }
         }
+
 
         // Проверка на блокировку (выпадение 6 у противника)
         val opponentRoll = dice.roll()
