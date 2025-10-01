@@ -6,7 +6,7 @@ fun main() {
     val result = LinkedList<Int>()
 
     while (list1.isNotEmpty() && list2.isNotEmpty()) {
-        result.add(if (list1.first < list2.first) list1.removeFirst() else list2.removeFirst())
+        result.add(if (list1.peek() < list2.peek()) list1.removeFirst() else list2.removeFirst())
     }
 
     result.addAll(list1)
